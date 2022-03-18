@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation Dependencies.kotlinStandardLibrary
+    //RX
+    api Dependencies.rxAndroid
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

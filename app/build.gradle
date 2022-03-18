@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin:'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.swvl.marvel"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://gateway.marvel.com/v1/public/\"")
+            buildConfigField("String", "PRIVATE_KEY", "\"0f1d0fdf46a0bf32f962b0b9997233c0395cdf8e\"")
+            buildConfigField("String", "PUBLIC_KEY", "\"6a7ed890b4b941a925202a5630d5b162\"")
+        }
+        release {
+            buildConfigField("String", "BASE_URL", "\"https://gateway.marvel.com/v1/public/\"")
+            buildConfigField("String", "PRIVATE_KEY", "\"0f1d0fdf46a0bf32f962b0b9997233c0395cdf8e\"")
+            buildConfigField("String", "PUBLIC_KEY", "\"6a7ed890b4b941a925202a5630d5b162\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':usecase')
+    implementation project(':data')
+
+    // kotlin
+    implementation Dependencies.kotlinStandardLibrary
+    implementation Dependencies.ktx
+
+    // UI
+    implementation Dependencies.appcompat
+    implementation Dependencies.constraintlayout
+    implementation Dependencies.material
+    implementation Dependencies.swipeToRefresh
+    implementation Dependencies.shimmer
+
+    // Navigation
+    implementation Dependencies.navigationFragment
+    implementation Dependencies.navigationUI
+
+    // reactive
+    implementation Dependencies.rxAndroid
+
+    // lifecycle components
+    implementation Dependencies.lifecycleLiveData
+    implementation Dependencies.lifecycleViewModel
+
+    // unit tests
+    testImplementation Dependencies.junit
+    // UI test
+    androidTestImplementation Dependencies.extJunit
+    androidTestImplementation Dependencies.espresso
+
+    // Service locator
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.koinScope
+    implementation Dependencies.koinViewModel
+
+    // Room - Data persistence
+    implementation Dependencies.roomRunTime
+    implementation Dependencies.roomKTX
+    implementation Dependencies.roomRxJava2
+    kapt Dependencies.roomCompiler
+
+    // Network
+    implementation Dependencies.okHttpInterceptor
+    implementation Dependencies.retrofitGsonConverter
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofitRxJava2Adapter
+
+    // image loading
+    implementation Dependencies.glide
+    implementation Dependencies.glideCompiler
+}

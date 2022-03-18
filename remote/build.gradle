@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation Dependencies.kotlinStandardLibrary
+    // network
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofitGsonConverter
+    //RX
+    api Dependencies.rxAndroid
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

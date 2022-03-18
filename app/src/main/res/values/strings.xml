@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Marvel</string>
+
+    <string name="no_data_available">No data available.</string>
+    <string name="character_image">Character Image</string>
+    <string name="character_name">Character name</string>
+    <string name="name">NAME</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="comicList">COMICS</string>
+
+    <!--Search-->
+    <string name="no_data_found">No characters have been found…</string>
+    <string name="action_search">Search</string>
+    <string name="hint_search">Search in characters…</string>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/gerka/Downloads/the-hitchhiker-prophecy-android/app/src/main/res/layout/characters_fragment.xml" value="0.17654508611955422" />
+        <entry key="..\:/Users/gerka/Downloads/the-hitchhiker-prophecy-android/app/src/main/res/layout/item_character.xml" value="0.17654508611955422" />
+        <entry key="..\:/Users/gerka/Downloads/the-hitchhiker-prophecy-android/app/src/main/res/layout/item_character_placeholder.xml" value="0.17654508611955422" />
+        <entry key="..\:/Users/gerka/Downloads/the-hitchhiker-prophecy-android/app/src/main/res/layout/item_search.xml" value="0.17654508611955422" />
+        <entry key="..\:/Users/gerka/Downloads/the-hitchhiker-prophecy-android/app/src/main/res/layout/layout_loading_characters.xml" value="0.17654508611955422" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
